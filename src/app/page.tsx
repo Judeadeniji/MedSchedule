@@ -1,9 +1,10 @@
-import { Hero } from "@/components/hero";
+import { Features, Hero } from "@/components/hero";
 
 export default function Home() {
   return (
-    <div>
+    <div className="space-y-5">
       <Hero />
+      <Features />
       
     </div>
   );

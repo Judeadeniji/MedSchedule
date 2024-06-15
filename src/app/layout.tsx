@@ -24,7 +24,9 @@ export default function RootLayout({
       <body className={`min-h-full ${inter.className} text-gray-800`}>
         <Providers>
           <Header />
-          {children}
+          <main className="container mx-auto px-3 md:px-0">
+            {children}
+          </main>
         </Providers>
       </body>
     </html>
