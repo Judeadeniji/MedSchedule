@@ -3,8 +3,8 @@ import { HeartFilledIcon } from "@radix-ui/react-icons";
 
 function Hero() {
   return (
-    <div className="relative aspect-[3/2] md:max-h-[90vh] md:w-full lg:aspect-[2.75/1] grid gap-x-6 md:grid-cols-5">
-      <div className="md:col-span-3 px-6 py-8 space-y-4 md:space-y-6 text-center md:text-start">
+    <div className="relative md:max-h-[90vh] md:w-full lg:aspect-[2.75/1] grid gap-x-6 md:grid-cols-5">
+      <div className="md:col-span-3 px-6 py-8 space-y-4 md:space-y-6 text-center md:text-start relative">
         <h1 className="text-4xl md:text-5xl font-bold md:font-semibold tracking-wide leading-snug md:leading-[1.4]">
           We help patients live a healthy, longer life.
         </h1>
@@ -15,12 +15,14 @@ function Hero() {
           Our team of doctors and nurses are here to help you.
         </p>
 
-        <Button color="primary" variant="solid" className=" font-medium">
+        <Button color="primary" variant="solid" className="rounded-medium px-8 md:py-4 font-medium">
           Make Appointment
         </Button>
+
+          <div className="md:hidden absolute -top-5 left-5 -z-10 animate-[spin_3s_ease-in_infinite] duration-[10s] bg-gradient-conic from-blue-600 via-cyan-500/90 to-blue-500 h-[300px] opacity-50 filter blur-2xl aspect-square rounded-full"></div>
       </div>
-      <div className="md:col-span-2 md:py-6 ">
-        <div className="h-auto max-w-[300px] rounded-large md:rounded-full overflow-hidden bg-amber-500">
+      <div className="md:col-span-2 md:py-6 hidden md:block">
+        <div className="h-auto w-full flex justify-center rounded-large md:rounded-full overflow-hidden bg-amber-500">
           <Image
             src="/smiley-doctor.png"
             alt="Smiley doctor"
@@ -44,34 +46,4 @@ function Hero() {
   );
 }
 
-function Features() {
-  return (
-    <div className="grid grid-cols-3 md:gap-x-8 lg:gapx-12 gap-x-3 gap-y-8">
-      <div className="bg-white shadow-lg p-6 rounded-2xl col-span-1">
-        <h1 className="font-semibold text-lg">Appointment Reminders</h1>
-        <p className="text-sm text-gray-600">
-          We send automated appointment reminders to ensure you never miss a
-          scheduled appointment.
-        </p>
-      </div>
-
-      <div className="bg-white shadow-lg p-6 rounded-2xl col-span-1">
-        <h1 className="font-semibold text-lg">Easy Scheduling</h1>
-        <p className="text-sm text-gray-600">
-          Our user-friendly scheduling system allows you to easily book and
-          manage your appointments at your convenience.
-        </p>
-      </div>
-
-      <div className="bg-white shadow-lg p-6 rounded-2xl col-span-1">
-        <h1 className="font-semibold text-lg">Personalized Care</h1>
-        <p className="text-sm text-gray-600">
-          Our team of healthcare professionals provide personalized care tailored
-          to your specific needs, ensuring you receive the best treatment.
-        </p>
-      </div>
-    </div>
-  );
-}
-
-export { Features, Hero };
+export { Hero };

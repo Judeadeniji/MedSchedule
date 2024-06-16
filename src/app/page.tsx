@@ -1,11 +1,12 @@
-import { Features, Hero } from "@/components/hero";
+import { Hero } from "@/components/hero";
+import { ServicesWeProvide, Solutions } from "@/components/home-screen";
 
 export default function Home() {
   return (
-    <div className="space-y-5">
+    <div className="space-y-20">
       <Hero />
-      <Features />
-      
+      <Solutions />
+      <ServicesWeProvide />
     </div>
   );
 }
